@@ -16,14 +16,11 @@ public class AlunoDAO {
 		String sql = "INSERT INTO alunos"
 				+ "\n(nome, idade, anoEscolar)"
 				+ "\nValues(?,?,?)";
-
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql);
-
 			ps.setString(1, alunoBean.getNome());
 			ps.setInt(2, alunoBean.getIdade());
 			ps.setString(3, alunoBean.getAnoEscolar());
-
 			ps.execute();
 			ps.close();
 
